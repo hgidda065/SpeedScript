@@ -1,16 +1,21 @@
-/* External CSS */
-h1 {
-    color: red;
-    background-color: green;
-    margin: auto 50px;
-    padding: -10px;
-    text-align: center;
-    width: 50%
+body {
+  padding-left: 200px;
+  padding-right: 200px;
 }
-#top {
-    margin-bottom: 50in;
+h2 {
+  color: rgb(250, 210, 210);
+}
+.link {
+  text-decoration: none;
+  color: rgb(240, 242, 255);
 }
 
-#bottom {
-    margin-top: 20px;
+@media screen and (max-width: 1120px) {
+  body {
+      padding-left: 0;
+      padding-right: 0;
+  }
+  iframe {
+      width: 100%;
+  }
 }
