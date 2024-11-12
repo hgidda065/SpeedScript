@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>car customization</title>
+    <title>Car customization</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
 </head>
 <body>
-    <h1>car customization</h1>
-    <div id="car preview">
+    <br><nav id="nav-menu">
+        <button id="nav-toggle"><img src="MISC/Images/Menu.png" alt="Menu"></button>
+        <ul id="nav-items">
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#community">Community</a></li>
+        </ul>
+    </nav>
+    <div id="landing">
+        <img src="MISC/Images/landingPage.png" alt="landingPage">
+    </div>
+    <br><h1>Car customization</h1>
+    <div id="car-preview">
         <div id="car"></div>
     </div>
     <form id="customization-form">
-        <label for ="car-color">choose car color:</label>
-        <input type="color"id="car-color">
-        <label for="car-decal">choose a decal:</label>
+        <label for="car-color">Choose car color:</label>
+        <input type="color" id="car-color">
+        <label for="car-decal">Choose a decal:</label>
         <select id="car-decal">
             <option value="stripe">Stripe</option>
             <option value="flame">Flame</option>
         </select>
         <button type="submit">Apply Customization</button>
     </form>
-    <script src="jquery.js"></script>
-    <script src="customization"></script>
-    
+    <script src="JavaScript/script.js"></script>
 </body>
 </html>

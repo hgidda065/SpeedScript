@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Architype';
+    src: url('THEOVD__.TTF');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #ffcc00;
+}
+
+#car-preview {
+    width: 80%;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#car {
+    width: 200px;
+    height: 100px;
+    background-color: #555;
+    position: relative;
+}
+
+.stripe {
+    background-image: linear-gradient(to right, transparent 50%, white 50%);
+    background-size: 10px;
+}
+
+.flame {
+    background-image: url('flame.png');
+    background-size: cover;
+}
+
+#nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#nav-menu p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#nav-toggle {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#nav-toggle:hover {
+    background-color: #555;
+}
+
+#nav-toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+#nav-items {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#nav-items li {
+    margin: 0 10px;
+}
+
+#nav-items li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#customization-form {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#customization-form label, #customization-form input, #customization-form select, #customization-form button {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#customization-form button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+
+#landing img{
+    position: static;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
