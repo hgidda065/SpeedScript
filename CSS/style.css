@@ -140,7 +140,7 @@ aside ul li a {
     position: static;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
