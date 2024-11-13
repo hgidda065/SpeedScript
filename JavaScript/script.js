@@ -12,7 +12,37 @@ $(document).ready(function () {
     });
 
     // Navigation menu animation
-    $("#nav-toggle").on("click", function () {
-        $("#nav-items").slideToggle();
+    $("#menu").click(function() {
+        $("aside").stop(true, true).slideToggle(500);
+    });
+
+    $("a[href='#landing']").click(function(event) {
+        event.preventDefault();
+        $('html, body').stop(true, true).animate({
+            scrollTop: $("#landing").offset().top
+        }, 1000, 'swing');
+    });
+
+    $("a[href='#about']").click(function(event) {
+        event.preventDefault();
+        $('html, body').stop(true, true).animate({
+            scrollTop: $("#about").offset().top
+        }, 1000, 'swing');
+    });
+
+    $("a[href='#car-preview']").click(function(event) {
+        event.preventDefault();
+        $('html, body').stop(true, true).animate({
+            scrollTop: $("#car-preview").offset().top
+        }, 1000, 'swing');
+    });
+
+    $("a[href='#contact']").click(function(event) {
+        event.preventDefault();
+        $('html, body').stop(true, true).animate({
+            scrollTop: $("#contact").offset().top
+        }, 1000, 'swing');
     });
 });
+
+
