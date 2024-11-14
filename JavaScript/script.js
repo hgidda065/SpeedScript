@@ -7,8 +7,14 @@ $(document).ready(function () {
         const color = $("#car-color").val();
         const decal = $("#car-decal").val();
 
-        // Apply color and decal to the car
-        $("#car").css("background-color", color).removeClass().addClass(decal);
+        // Fade out car for smooth transition
+        $("#car").fadeOut(200, function() {
+            // Apply color and decal to the car
+            $("#car").css("background-color", color).removeClass().addClass(decal);
+
+            // Fade the car back in with the new customization
+            $("#car").fadeIn(500);
+        });
     });
 
     // Navigation menu animation
