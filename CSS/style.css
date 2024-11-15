@@ -42,8 +42,11 @@ h1 {
 }
 
 .flame {
-    background-image: url('flame.png');
+    background-image: url('../MISC/Images/flames.png');
     background-size: cover;
+    display: flex;
+    height: 100px;
+    width: 200px;
 }
 
 nav {
