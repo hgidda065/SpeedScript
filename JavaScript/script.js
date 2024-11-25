@@ -41,7 +41,7 @@ $(document).ready(function () {
         // Prevent the default link behavior
         event.preventDefault();
         // Animate the scroll to the top of the about section
-        $('html, body').animate({
+        $('html, body').stop(true, true).animate({
             scrollTop: $("#about").offset().top
         }, 1000, 'swing');
     });
@@ -61,8 +61,8 @@ $(document).ready(function () {
         // Prevent the default link behavior
         event.preventDefault();
         // Animate the scroll to the top of the contact section
-        $('html, body').animate({
+        $('html, body').stop(true, true).animate({
             scrollTop: $("#contact").offset().top
-        }, 800, 'swing');
+        }, 1000, 'swing');
     });
 });
