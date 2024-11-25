@@ -64,6 +64,12 @@ nav ul {
     column-gap: 30px;
 }
 
+aside ul li a.active {
+    color: #ffcc00; /* Highlight color */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 nav ul li:first-child {
     margin-right: auto;
 }
@@ -81,8 +87,9 @@ aside {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color:  rgb(27, 27, 25);
+    background-color:  rgba(0, 0, 0, 0.479);
     font-size: 20px;
+    backdrop-filter: blur(10px);
     font-family: 'Architype';
     letter-spacing: 1px;
 }
@@ -91,10 +98,9 @@ aside ul {
     height: 100%;
     width: 100%;
     margin: 0;
-    display: flex;;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    margin-top: 70px;
     align-items: center;
     row-gap: 50px;
     list-style: none;
@@ -179,13 +185,21 @@ aside ul li a {
 #contact {
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #1a1a1a;
     color: #fff;
     font-family: 'Architype';
     letter-spacing: 1px;
     row-gap: 20px;
     column-gap: 20px;
+}
+
+#contact h1 {
+    display: flex;
+    align-self: top;
+    justify-content: center;
+}
+
+#contact-content {
+    display: flex;
+    justify-content: center;
 }

@@ -1,4 +1,33 @@
 $(document).ready(function () {
+
+    const sections = $("section"); // Select all sections
+    const navLinks = $("aside ul li a"); // Select all aside links
+
+    // Function to update the active section
+    function updateActiveSection() {
+        let scrollPosition = $(document).scrollTop() + 100; // Current scroll position (+100 for offset)
+
+        sections.each(function () {
+            let sectionTop = $(this).offset().top;
+            let sectionBottom = sectionTop + $(this).outerHeight();
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                let currentId = $(this).attr("id"); // Get the ID of the current section
+
+                // Update the active link
+                navLinks.removeClass("active");
+                $("aside ul li a[href='#" + currentId + "']").addClass("active");
+            }
+        });
+    }
+
+    // Attach the scroll event to update the active section
+    $(window).on("scroll", updateActiveSection);
+
+    // Call once on page load to set the initial active section
+    updateActiveSection();
+
+
     // Attach a submit event handler to the car customization form
     $("#customization-form").on("submit", function (e) {
         // Prevent the default form submission behavior
@@ -33,17 +62,7 @@ $(document).ready(function () {
         // Animate the scroll to the top of the landing section
         $('html, body').stop(true, true).animate({
             scrollTop: $("#landing").offset().top
-        }, 1000, 'swing');
-    });
-
-    // Smooth scroll to the about section when the corresponding link is clicked
-    $("a[href='#about']").click(function(event) {
-        // Prevent the default link behavior
-        event.preventDefault();
-        // Animate the scroll to the top of the about section
-        $('html, body').stop(true, true).animate({
-            scrollTop: $("#about").offset().top
-        }, 1000, 'swing');
+        }, 100, 'swing');
     });
 
     // Smooth scroll to the car preview section when the corresponding link is clicked
@@ -53,8 +72,30 @@ $(document).ready(function () {
         // Animate the scroll to the top of the car preview section
         $('html, body').animate({
             scrollTop: $("#car-preview").offset().top
-        }, 1000, 'swing');
+        }, 100, 'swing');
     });
+
+    // Smooth scroll to the track preview section when the corresponding link is clicked
+    $("a[href='#track-preview']").click(function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Animate the scroll to the top of the track preview section
+        $('html, body').animate({
+            scrollTop: $("#track-preview").offset().top
+        }, 100, 'swing');
+    });
+
+    // Smooth scroll to the gallery section when the corresponding link is clicked
+    $("a[href='#gallery']").click(function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Animate the scroll to the top of the gallery section
+        $('html, body').animate({
+            scrollTop: $("#gallery").offset().top
+        }, 100, 'swing');
+    });
+
+
 
     // Smooth scroll to the contact section when the corresponding link is clicked
     $("a[href='#contact']").click(function(event) {
@@ -63,6 +104,6 @@ $(document).ready(function () {
         // Animate the scroll to the top of the contact section
         $('html, body').stop(true, true).animate({
             scrollTop: $("#contact").offset().top
-        }, 1000, 'swing');
+        }, 100, 'swing');
     });
 });
