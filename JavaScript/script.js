@@ -41,7 +41,7 @@ $(document).ready(function () {
         // Prevent the default link behavior
         event.preventDefault();
         // Animate the scroll to the top of the about section
-        $('html, body').stop(true, true).animate({
+        $('html, body').animate({
             scrollTop: $("#about").offset().top
         }, 1000, 'swing');
     });
@@ -51,7 +51,7 @@ $(document).ready(function () {
         // Prevent the default link behavior
         event.preventDefault();
         // Animate the scroll to the top of the car preview section
-        $('html, body').stop(true, true).animate({
+        $('html, body').animate({
             scrollTop: $("#car-preview").offset().top
         }, 1000, 'swing');
     });
@@ -61,8 +61,8 @@ $(document).ready(function () {
         // Prevent the default link behavior
         event.preventDefault();
         // Animate the scroll to the top of the contact section
-        $('html, body').stop(true, true).animate({
+        $('html, body').animate({
             scrollTop: $("#contact").offset().top
-        }, 1000, 'swing');
+        }, 800, 'swing');
     });
 });

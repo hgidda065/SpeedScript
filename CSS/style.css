@@ -143,7 +143,7 @@ aside ul li a {
     padding: 0;
 }
 
-#car-preview {
+#customization-form {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -151,8 +151,15 @@ aside ul li a {
     align-items: center;
     background-color: #ffffff;
     color: #000000;
-    font-family: 'Architype';
     letter-spacing: 1px;
+}
+
+#customization-form button {
+    letter-spacing: 2px;
+}
+
+#car-preview {
+    font-family: 'Architype';
 }
 
 #track-preview {
