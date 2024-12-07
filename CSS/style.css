@@ -18,6 +18,7 @@ h1 {
     color: #ffcc00;
 }
 
+
 #car {
     width: 200px;
     height: 100px;
@@ -25,18 +26,6 @@ h1 {
     position: relative;
 }
 
-.stripe {
-    background-image: linear-gradient(to right, transparent 50%, white 50%);
-    background-size: 10px;
-}
-
-.flame {
-    background-image: url('../MISC/Images/flames.png');
-    background-size: cover;
-    display: flex;
-    height: 100px;
-    width: 200px;
-}
 
 nav {
     color: black;
