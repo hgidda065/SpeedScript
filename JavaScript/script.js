@@ -166,4 +166,36 @@ $(document).ready(function () {
             scrollTop: $("#contact").offset().top
         }, 100, 'swing');
     });
+
+    let currentSectionIndex = 0; // Index of the current visible section
+  let isScrolling = false; // Prevent multiple scrolls at the same time
+
+  $(window).on("wheel", function (e) {
+    if (isScrolling) return; // Ignore new scroll events until scrolling completes
+
+    isScrolling = true; // Set the scrolling state to true
+    const delta = e.originalEvent.deltaY;
+
+    if (delta > 0 && currentSectionIndex < sections.length - 1) {
+      // Scroll down
+      currentSectionIndex++;
+    } else if (delta < 0 && currentSectionIndex > 0) {
+      // Scroll up
+      currentSectionIndex--;
+    }
+
+    $("html, body").animate(
+      {
+        scrollTop: $(sections[currentSectionIndex]).offset().top,
+      },
+      {
+        duration: 700,
+        easing: "easeOutQuad",
+        complete: function () {
+          isScrolling = false; // Allow scrolling after animation completes
+        },
+      }
+    );
+  });
+
 });
