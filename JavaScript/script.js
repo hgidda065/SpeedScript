@@ -56,17 +56,25 @@ $(document).ready(function () {
     });
 
     $(window).on("scroll", function () {
-        $(".track-image, .track-text").each(function (index) {
-            if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
-                if (!$(this).hasClass("visible")) {
-                    $(this).addClass("visible");
-                    $(this)
-                        .delay(index * 200) // Delay based on index (400ms per image)
-                        .slideDown(800);
+        const section = $("#track-preview");
+        const sectionTop = section.offset().top;
+        const sectionHeight = section.outerHeight();
+        const windowHeight = $(window).height();
+        const windowScrollTop = $(window).scrollTop();
+    
+        // Check if the section is in the viewport
+        if (windowScrollTop + windowHeight > sectionTop && windowScrollTop < sectionTop + sectionHeight) {
+            $(".track-image, .track-text").each(function (index) {
+                if ($(this).offset().top < windowScrollTop + windowHeight) {
+                    if (!$(this).hasClass("visible")) {
+                        $(this).addClass("visible");
+                        $(this)
+                            .delay(index * 400) // Delay based on index (400ms per item)
+                            .slideDown(800); // Slide the entire track-item
+                    }
                 }
-            }
-        });
-        
+            });
+        }
     });
 
     // Smooth scroll to the landing section when the corresponding link is clicked
