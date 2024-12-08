@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     // Function to update the active section
     function updateActiveSection() {
-        let scrollPosition = $(document).scrollTop() + 100; // Current scroll position (+100 for offset)
+        let scrollPosition = $(document).scrollTop() + 300; // Current scroll position (+300 for offset)
 
         sections.each(function () {
             let sectionTop = $(this).offset().top;
@@ -53,6 +53,20 @@ $(document).ready(function () {
     $("#menu").click(function() {
         // Stop any ongoing animations and toggle the visibility of the aside element with a sliding effect
         $("aside").stop(true, true).slideToggle(500);
+    });
+
+    $(window).on("scroll", function () {
+        $(".track-image, .track-text").each(function (index) {
+            if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+                if (!$(this).hasClass("visible")) {
+                    $(this).addClass("visible");
+                    $(this)
+                        .delay(index * 200) // Delay based on index (400ms per image)
+                        .slideDown(800);
+                }
+            }
+        });
+        
     });
 
     // Smooth scroll to the landing section when the corresponding link is clicked
