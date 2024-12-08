@@ -68,14 +68,42 @@ $(document).ready(function () {
                 if ($(this).offset().top < windowScrollTop + windowHeight) {
                     if (!$(this).hasClass("visible")) {
                         $(this).addClass("visible");
-                        $(this)
-                            .delay(index * 400) // Delay based on index (400ms per item)
-                            .slideDown(800); // Slide the entire track-item
+                        $(this).delay(index * 400).slideDown(800); // Delay based on index (400ms per item) and Slide the entire track-item
                     }
                 }
             });
         }
     });
+
+    $(".carousel-item").hover(
+        function () {
+            // On mouse enter
+            $(this).find(".carousel-caption").fadeIn(300); // Smooth fade-in
+        },
+        function () {
+            // On mouse leave
+            $(this).find(".carousel-caption").fadeOut(300); // Smooth fade-out
+        }
+    );
+
+    $(document).ready(function () {
+        let achievementsTriggered = false;
+    
+        $(window).on("scroll", function () {
+            const achievementsSection = $("#achievements");
+            const achievementsOffset = achievementsSection.offset().top;
+            const windowBottom = $(window).scrollTop() + $(window).height();
+    
+            if (windowBottom > achievementsOffset && !achievementsTriggered) {
+                achievementsTriggered = true;
+    
+                $(".achievement-item").each(function (index) {
+                    $(this).delay(index * 400).fadeIn(1200); // Delay each item's fadeIn
+                });
+            }
+        });
+    });
+    
 
     // Smooth scroll to the landing section when the corresponding link is clicked
     $("a[href='#landing']").click(function(event) {
@@ -114,6 +142,16 @@ $(document).ready(function () {
         // Animate the scroll to the top of the gallery section
         $('html, body').animate({
             scrollTop: $("#gallery").offset().top
+        }, 100, 'swing');
+    });
+
+    // Smooth scroll to the contact section when the corresponding link is clicked
+    $("a[href='#achievements']").click(function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Animate the scroll to the top of the contact section
+        $('html, body').stop(true, true).animate({
+            scrollTop: $("#achievements").offset().top
         }, 100, 'swing');
     });
 

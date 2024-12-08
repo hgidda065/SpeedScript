@@ -24,6 +24,7 @@
             <li><a href="#car-preview" class="inactive">Cars</a></li>
             <li><a href="#track-preview" class="inactive">Tracks</a></li>
             <li><a href="#gallery" class="inactive">Gallery</a></li>
+            <li><a href="#achievements" class="inactive">Achievements</a></li>
             <li><a href="#contact" class="inactive">Contact</a></li>
         </ul>
     </aside>
@@ -38,7 +39,9 @@
     <section id="car-preview"><br>
         <br><h1>Car customization</h1>
         <form id="customization-form">
-        <div id="car"></div>
+        <div id="car">
+            <img src="MISC/Images/car.png" alt="Car" id="car-image">
+        </div>
             <label for="car-color">Choose car color:</label>
             <input type="color" id="car-color">
 
@@ -71,15 +74,81 @@
 
     <section id="gallery"><br>
         <br><h1>Gallery</h1>
-
+        <div id="gallery-carousel" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="MISC/Images/StartUI.png" class="d-block w-100" alt="StartUI">
+                <div class="carousel-caption">
+                  <h5>Start UI</h5>
+                  <p>This is the UI you will see when you start the game.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="MISC/Images/Achievements.png" class="d-block w-100" alt="Achievements">
+                <div class="carousel-caption">
+                  <h5>Achievement</h5>
+                  <p>This is how the achievements are shown in the game</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="MISC/Images/FinishUI.png" class="d-block w-100" alt="FinishUI">
+                <div class="carousel-caption">
+                  <h5>Finish UI and Leaderboard</h5>
+                  <p>This is the screen after finishing a race with LEaderboard</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="MISC/Images/TrackSelector.png" class="d-block w-100" alt="TrackSelector">
+                <div class="carousel-caption">
+                  <h5>Track selector</h5>
+                  <p>Track selector allows you to pick between different tracks shown above</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </section>
+
+    <section id="achievements"><br>
+        <br><h1>Achievements</h1>
+        <div id="achievements-content">
+            <p>Here are some of the achievements you can get in the game</p>
+            <div class="achievement-item">
+                <img src="MISC/Images/Achievement1.png" alt="Achievement1">
+                <p>Finish 3 races</p>
+            </div>
+            <div class="achievement-item">
+                <img src="MISC/Images/Achievement2.png" alt="Achievement2">
+                <p>Finish 10 Races</p>
+            </div>
+        </div>
+    </section>
+    
 
     <section id="contact"><br>
         <br><h1>Contact Us</h1>
         <div id="contact-content">
             <p><a href="https://discord.com/">Discord</a></p>
+            <p><a href="https://twitter.com/">Twitter</a></p>
+            <p><a href="https://www.instagram.com/">Instagram</a></p>
         </div>
     <script src="JavaScript/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer>
+        <p>&copy; 2024 SpeedSharp by Harshan, Luke and Sikander</p>
 </body>
 </html>

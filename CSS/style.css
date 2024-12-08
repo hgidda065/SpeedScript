@@ -19,10 +19,9 @@ h1 {
 }
 
 
-#car {
-    width: 200px;
-    height: 100px;
-    background-color: #555;
+#car-image {
+    width: 600px;
+    height: 300px;
     position: relative;
 }
 
@@ -133,6 +132,11 @@ aside ul li a {
     background-repeat: no-repeat;
     background-size: cover;
     }
+
+    #car-image {
+        width: 300px;
+        height: 150px;
+    }
 }
 
 #customization-form {
@@ -229,9 +233,7 @@ aside ul li a {
     text-align: center;
     margin: 0 50px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -239,6 +241,7 @@ aside ul li a {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -246,11 +249,53 @@ aside ul li a {
     column-gap: 20px;
 }
 
-#contact {
-    height: 100vh;
+#gallery img {
+    width: 1200px;
+    height: 600px;
+    min-height: 200px;
+    min-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-caption {
+    display: none; /* Initially hidden */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#achievements {
+    height: 50vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #1a1a1a;
     color: #fff;
+    font-family: 'Architype';
+    letter-spacing: 1px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.achievement-item {
+    display: none; /* Hidden until faded in */
+    text-align: center;
+    margin: 10px;
+}
+
+.achievement-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+
+#contact {
+    height: 50vh;
+    width: 100%;
     font-family: 'Architype';
     letter-spacing: 1px;
     row-gap: 20px;
@@ -266,4 +311,24 @@ aside ul li a {
 #contact-content {
     display: flex;
     justify-content: center;
+    letter-spacing: 2px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-content p {
+    display:flex;
+    flex-direction: column;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Architype';
+    letter-spacing: 1px;
+    top: 0;
 }
