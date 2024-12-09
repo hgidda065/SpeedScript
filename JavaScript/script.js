@@ -86,22 +86,20 @@ $(document).ready(function () {
         }
     );
 
-    $(document).ready(function () {
-        let achievementsTriggered = false;
-    
-        $(window).on("scroll", function () {
-            const achievementsSection = $("#achievements");
-            const achievementsOffset = achievementsSection.offset().top;
-            const windowBottom = $(window).scrollTop() + $(window).height();
-    
-            if (windowBottom > achievementsOffset && !achievementsTriggered) {
-                achievementsTriggered = true;
-    
-                $(".achievement-item").each(function (index) {
-                    $(this).delay(index * 400).fadeIn(1200); // Delay each item's fadeIn
-                });
-            }
-        });
+    let achievementsTriggered = false;
+
+    $(window).on("scroll", function () {
+        const achievementsSection = $("#achievements");
+        const achievementsOffset = achievementsSection.offset().top;
+        const windowBottom = $(window).scrollTop() + $(window).height();
+
+        if (windowBottom > achievementsOffset && !achievementsTriggered) {
+            achievementsTriggered = true;
+
+            $(".achievement-item").each(function (index) {
+                $(this).delay(index * 400).fadeIn(1200); // Delay each item's fadeIn
+            });
+        }
     });
     
 
